@@ -1,0 +1,12 @@
+- name: handeler_1
+  copy:
+    src: "{{ item }}"
+    dest: /var/www/html/
+  loop: "{{ files_list }}"
+  notify: handler_2
+
+- name: handler_2
+  service:
+    name: "{{ package_name }}"
+    state: started
+  

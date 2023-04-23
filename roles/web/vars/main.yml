@@ -1,0 +1,5 @@
+package_name: nginx
+message: Hello Hager
+files_list:
+  - style.css
+  - script.js

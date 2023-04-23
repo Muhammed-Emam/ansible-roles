@@ -1,0 +1,11 @@
+- name: task 1
+  apt:
+    name: "{{ package_name }}"
+    state: present
+  notify: handler_1
+
+- name: my template
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html  
+
